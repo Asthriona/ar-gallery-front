@@ -75,7 +75,7 @@ export default {
   methods: {
     getRace() {
       axios
-        .get(`http://localhost:3000/api/race/${this.raceCode}`)
+        .get(`${import.meta.env.VITE_APP_URI}/race/${this.raceCode}`)
         .then((res) => {
           this.race = res.data.race;
         });

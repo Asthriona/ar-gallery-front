@@ -47,7 +47,7 @@ export default {
     },
     methods: {
         getDrivers() {
-            axios.get('http://localhost:3000/api/driver')
+            axios.get(`${import.meta.env.VITE_APP_URI}/driver`)
             .then((res) => {
                 this.drivers = res.data.driver;
             })

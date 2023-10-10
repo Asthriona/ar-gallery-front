@@ -47,7 +47,7 @@ export default {
   },
   methods: {
     getRaces() {
-      axios.get("http://localhost:3000/api/race").then((res) => {
+      axios.get(`${import.meta.env.VITE_APP_URI}/race`).then((res) => {
         console.log(res.data.races);
         this.races = res.data.races;
       });
