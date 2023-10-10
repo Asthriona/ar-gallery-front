@@ -33,10 +33,6 @@
   </v-container>
 </template>
 
-<script setup>
-import HelloWorld from "@/components/HelloWorld.vue";
-</script>
-
 <script>
 import axios from "axios";
 export default {
