@@ -16,9 +16,9 @@
     </v-container>
   </div>
   <v-container>
-    <v-row>
+    <v-responsive>
       <v-col cols="12"><h1>Race Logs:</h1></v-col>
-      <v-col cols="4" v-for="race in races" :key="race.name">
+      <v-col xs="12" sm="12" md="6" lg="4" xl="4" xxl="4" v-for="race in races" :key="race.name">
         <v-card class="mr-4 ml-4 mx-auto">
           <v-img :src="race.images[0]"></v-img>
           <v-card-title>{{ race.title }}</v-card-title>
@@ -29,7 +29,7 @@
           </v-card-actions>
         </v-card>
       </v-col>
-    </v-row>
+    </v-responsive>
   </v-container>
 </template>
 

@@ -7,8 +7,8 @@
       </v-col>
     </v-row>
     <v-row>
-      <v-col cols="12"> Race information: </v-col>
-      <v-col cols="12">
+      <!-- <v-col cols="12" v-if="race.winner !== null"> Race information: </v-col>
+      <v-col cols="12" v-if="race.winner !== null">
         <h2>
             Race Winner: <v-avatar size="64">
             <v-img :src="race.winner.image" cover></v-img>
@@ -16,10 +16,10 @@
           {{ `${race.winner.team} - ` || "" }}
           {{ race.winner.name || "" }} #{{ race.winner.carNbr || "" }}
         </h2>
-      </v-col>
+      </v-col> -->
     </v-row>
     <v-row>
-      <v-col cols="4" v-for="(image, index) in race.images" :key="index">
+      <v-col xs="12" sm="12" md="6" lg="4" xl="4" xxl="4" v-for="(image, index) in race.images" :key="index">
         <v-img :src="image" @click="openFullScreenPreview(index)" cover></v-img>
       </v-col>
     </v-row>
